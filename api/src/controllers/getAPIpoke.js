@@ -4,17 +4,14 @@ const {Pokemon, Type} = require('../db')
 const endpoint = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=60';
 
 async function getAPIpoke(){
-
     try{
-
         const response = await axios.get(endpoint);
     
         const apiresponse = response.data.results.map((poke)=>axios.get(poke.url));
-        
+
         const pokefromAPI = await axios.all(apiresponse);
 
         const pokeAPI = pokefromAPI.map((poke)=>{
-
             const pokedataAPI ={
                 id: poke.data.id,
                 name: poke.data.name.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' '),
@@ -30,48 +27,51 @@ async function getAPIpoke(){
                 }),
             }
             return pokedataAPI;
-    });
-        console.log(pokeAPI)
+        });
+        // console.log(pokeAPI)
         return pokeAPI;
-      
     }catch(error){
         console.log(error)
     }
-
 }
 
-getAPIpoke()
 
 async function getDBpoke(){
     try{
         const responseDB = await Pokemon.findAll({
             include:{
-                model: Type,
+                model:Type,
                 attributes:['name'],
                 through:{
                     attributes:[],
-                },
-            },
-        });
-
+                }
+            }
+        })
+        
         return responseDB;
-
-    }catch(error){
-        console.log(error)
-    }
-}
-
-async function getAllpoke(){
-    try{
-        const pokemonAPI= await getAPIpoke();
-        const pokemonDB= await getDBpoke();
-        const pokemonDATA=[...pokemonAPI, ...pokemonDB];
-        console.log(pokemonDATA)
-        return pokemonDATA;
+        
     }catch(error){
         console.log(error)
     }
 }
 
 
-getAllpoke()
+
+
+
+    async function getAllpoke(){
+        try{
+            const pokemonAPI=await getAPIpoke();
+            const pokemonDB=await getDBpoke();
+            if (pokemonDB?.length > 0) return [...pokemonAPI, ...pokemonDB]
+            return pokemonAPI
+        }catch(error){
+            console.log(error)
+        }
+    }
+
+module.exports = {
+    getAPIpoke,
+    getDBpoke,
+    getAllpoke
+}
