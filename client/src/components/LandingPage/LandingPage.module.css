@@ -1,0 +1,9 @@
+.landingbutton {
+    padding: 10px 20px;
+    color: #fff;
+    border: solid 1px #af0f47; /* Cambio el borde a rojo oscuro */
+    border-radius: 20px;
+    background: #af0f47; /* Cambio el fondo a rojo oscuro */
+    font-family: 'Open Sans', sans-serif; /* Agrego una fuente legible y moderna */
+    transition: all 0.3s ease-in-out; /* Agrego una transición suave */
+}
