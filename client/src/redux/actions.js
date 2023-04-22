@@ -16,12 +16,13 @@ export function getPoke(){
         try{
             const {data} = await axios.get("http://localhost:3001/pokemons")
             return dispatch({type:GET_POKE, payload:data})
-
+            
         } catch(error){
             console.log(error);
         }
     };
 };
+
 
 export function getNamePoke(name){
     return async function(dispatch){

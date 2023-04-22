@@ -1,0 +1,46 @@
+.menuFilterContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* background-color: #af0f47; */
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+  }
+  
+  .menuFilterContainer > div {
+	display: flex;
+	align-items: center;
+  }
+  
+  .menuFilterContainer > div:not(:first-child) {
+	margin-left: 20px;
+  }
+  
+  label {
+	margin-right: 10px;
+  }
+  
+
+  select option {
+	background-color: #af0f47;
+	color: rgb(255, 255, 255);
+  }
+  
+  select option[value='all'] {
+	font-weight: bold;
+  }
+  
+  select option:not([value='all']):hover {
+	background-color: black;
+	color: white;
+  }
+  
+
+@media (max-width: 650px) {
+	.menuFilterContainer {
+		font-size: 14px;
+		flex-direction: column;
+		align-items: center;
+	}
+}

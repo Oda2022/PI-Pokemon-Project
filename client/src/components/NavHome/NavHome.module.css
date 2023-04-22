@@ -1,0 +1,65 @@
+.navHomeContainer {
+	width: 100%;
+	padding: 10px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navHomeLogo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.logoImg {
+	height: 35px;
+}
+
+.navHomeButtonCreate {
+    padding: 10px 20px;
+    color: #fff;
+    border: solid 1px #af0f47; /* Cambio el borde a rojo oscuro */
+    border-radius: 20px;
+    background: #af0f47; /* Cambio el fondo a rojo oscuro */
+    font-family: 'Open Sans', sans-serif; /* Agrego una fuente legible y moderna */
+    transition: all 0.3s ease-in-out; /* Agrego una transición suave */
+}
+
+.navHomeButtonCreate:hover {
+    background-color: #fff; /* Cambio el fondo a blanco */
+    border: solid 1px #fff; /* Cambio el borde a blanco */
+    color: #af0f47; /* Cambio el texto a rojo oscuro */
+    cursor: pointer; /* Agrego un cursor para indicar que se trata de un botón */
+}
+
+
+.variantText {
+	font-weight: 200;
+}
+
+@media (max-width: 700px) {
+	.navHomeContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding: 10px 40px;
+		font-size: 14px;
+	}
+
+	.navHomeButtonCreate {
+		padding: 5px 10px;
+	}
+
+	.navHomeLogo {
+		gap: 5px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.logoImg {
+		height: 25px;
+	}
+}

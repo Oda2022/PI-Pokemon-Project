@@ -1,0 +1,75 @@
+.cardTypes {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.type {
+	color: white;
+	font-size: 14px;
+	padding: 3px 15px 5px 15px;
+	border-radius: 10px;
+}
+
+.type[value="grass"] {
+	background-color: #64b33f;
+}
+.type[value="fire"] {
+	background: #e26e1a;
+}
+.type[value="water"] {
+	background-color: #4776ec;
+}
+.type[value="ground"] {
+	background-color: #d9b043;
+}
+.type[value="electric"] {
+	background-color: #f2c412;
+}
+.type[value="flying"] {
+	background-color: #9685cf;
+}
+.type[value="poison"] {
+	background-color: #893688;
+}
+.type[value="normal"] {
+	background-color: #939260;
+}
+.type[value="psychic"] {
+	background-color: #f7316b;
+}
+.type[value="dragon"] {
+	background-color: #5819f3;
+}
+.type[value="ice"] {
+	background-color: #73caca;
+}
+.type[value="rock"] {
+	background-color: #a08b31;
+}
+.type[value="bug"] {
+	background-color: #919f1c;
+}
+.type[value="ghost"] {
+	background-color: #5c497f;
+}
+.type[value="fighting"] {
+	background: #a62a22;
+}
+.type[value="fairy"] {
+	background: #f656ff;
+}
+.type[value="dark"] {
+	background: #5c493a;
+}
+.type[value="steel"] {
+	background: #9d9cbf;
+}
+.type[value="shadow"] {
+	background: #562ba6;
+}
+.type[value="unknown"] {
+	background: #000;
+}
+/* 17  steel, unknown, shadow*/

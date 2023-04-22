@@ -1,0 +1,49 @@
+.homeContainer {
+	width: 100%;
+	min-height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+}
+
+.menuContainer {
+	background-color: rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+}
+
+.subMenuContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.filtersContainer {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin: 0 0 10px 0;
+}
+
+.paginatedList {
+	display: grid;
+	place-items: center;
+}
+
+.pokeListContainer {
+	width: 100%;
+	height: 100%;
+	padding-top: 10px;
+}
+
+.pokeList {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 6fr));
+	place-items: center;
+	gap: 20px;
+}
+
+
+

@@ -4,7 +4,7 @@ const {Pokemon, Type} = require('../db')
 const endpoint = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=60';
 
 async function getAPIpoke(){
-    try{
+    try{  
         const response = await axios.get(endpoint);
     
         const apiresponse = response.data.results.map((poke)=>axios.get(poke.url));

@@ -1,11 +1,13 @@
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import LandingPage from './components/LandingPage/LandingPage';
+import LandingPage from './components/LandingPage/LandingPage.jsx';
+import Home from "./components/Home/Home.jsx";
 
 function App() {
   return (
     <BrowserRouter> 
       <Switch>
-        <Route path='/' component={LandingPage}/>
+        <Route exact path='/' component={LandingPage}/>
+        <Route path='/home' component={Home} />
 
       </Switch>
   
