@@ -156,7 +156,7 @@ function rootReducer(state=initialState, action) {
         case FILTER_CREATED_POKE: 
             const pokeCreatedFilter = [...state.allpoke]
             if(action.payload === 'existed'){
-                const createdAPI = pokeCreatedFilter.filter((poke)=> poke.id < 70)
+                const createdAPI = pokeCreatedFilter.filter((poke)=> poke.id < 1000)
                 return {
                     ...state,
                     pokeList: createdAPI,

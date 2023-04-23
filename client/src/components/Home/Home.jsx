@@ -60,8 +60,8 @@ const Home = () => {
 							<h1>{allPokemon[0]?.name}</h1>
 					<div className={s.pokeListContainer}>
 						<div className={s.pokeList} >
-							{allPokemon.length > 0 &&  
-								allPokemon.map((poke, index) => 
+							{currentPokemons.length > 0 &&  
+								currentPokemons.map((poke, index) => 
 									<Card
 									    key={index}
 										id={poke.id}
@@ -70,7 +70,7 @@ const Home = () => {
 										types={poke.types}
 									/>
 								)} 
-								<h1>"hola"</h1>
+								
 							{currentPokemons.length===0 && <h1>no hay pokemones</h1>} 
 						</div>
 					</div> 

@@ -2,12 +2,12 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	gap: 20px;
+	gap: 50px;
 }
 
 .type {
 	color: white;
-	font-size: 14px;
+	font-size: 25px;
 	padding: 3px 15px 5px 15px;
 	border-radius: 10px;
 }

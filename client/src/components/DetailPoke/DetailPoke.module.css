@@ -1,0 +1,128 @@
+.detailsContainer {
+	width: 100%;
+	min-height: 100vh;
+    background-image: url("../Imagenes/pxfuel.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.pokeInfoContainer {
+	width: 100%;
+	height: calc(100vh - 60px);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding-bottom: 70px;
+}
+
+.pokeInfoImgContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.pokeInfoImg {
+	width: 400px;
+}
+
+.pokeInfoDetailsContainer {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.tableInfoContainer {
+	width: 400px;
+	height: 380px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: rgb(255, 255, 255);
+	border-radius: 15px;
+	font-weight: bold;
+}
+
+.titleInfo {
+	padding: 10px 30px;
+	margin: 10px;
+	border-radius: 33px;
+	background-color: rgb(255, 255, 255);
+	text-align: center;
+}
+.titleInfo::first-letter {
+	text-transform: uppercase;
+}
+
+.rowInfo {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	place-items: center;
+	border-top: 2px solid rgba(0, 0, 0, 0.1);
+	padding: 25px 0 15px 0;
+}
+
+.iconHp,
+.iconAttack,
+.iconDefense,
+.iconSpeed,
+.iconHeight,
+.iconWeight {
+	padding: 15px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-right: 5px;
+}
+
+.iconHp {
+	background-image: url("../Imagenes/IconHp.png");
+}
+
+.iconAttack {
+	background-image: url("../Imagenes/IconAttack.png");
+}
+
+.iconDefense {
+	background-image: url("../Imagenes/IconDefense.png");
+}
+.iconSpeed {
+	background-image: url("../Imagenes/IconSpeed.png");
+}
+.iconHeight {
+	background-image: url("../Imagenes/IconHeight.png");
+}
+.iconWeight {
+	background-image: url("../Imagenes/IconWeight.png");
+}
+
+@media (max-width: 768px) {
+	.pokeInfoContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		height: auto;
+	}
+	.pokeInfoImg {
+		width: 200px;
+		padding-top: 20px;
+	}
+}
+
+@media (max-width: 425px) {
+	.rowInfo {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.tableInfoContainer {
+		width: 300px;
+		height: auto;
+		padding: 10px 0;
+	}
+}
