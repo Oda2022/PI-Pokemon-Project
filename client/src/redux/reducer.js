@@ -24,9 +24,9 @@ function rootReducer(state=initialState, action) {
         case GET_POKE:
             return {
                 ...state,
-                pokeList: [action.payload],
-                allpoke: [action.payload],
-                createPokefilter: [action.payload]
+                pokeList: [...action.payload],
+                allpoke: [...action.payload],
+                createPokefilter: [...action.payload]
             };
 
         case NAME_POKE:

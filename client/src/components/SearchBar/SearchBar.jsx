@@ -10,7 +10,9 @@ const SearchBar = ({setcurrentPage}) => {
 
     const handlerInputChanged = (event) => {
         event.preventDefault();
-        setName(event.target.value.toLowerCase()); // verificar despues de observar en browser
+        const value = event.target.value;
+        const changeFirstUpperletter=value.charAt(0).toUpperCase() + value.slice(1);
+        setName(changeFirstUpperletter); // verificar despues de observar en browser
     };
 
     const handlerSubmit = (event) => {

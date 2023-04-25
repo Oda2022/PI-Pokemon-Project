@@ -36,7 +36,7 @@ const CreatedPoke = () => {
 		if (
 			allPokemons.find(
 				(pokemon) =>
-					pokemon.name.toUpperCase() === newPokemon.name.toUpperCase()
+					pokemon.name === newPokemon.name
 			)
 		)
 			errors.name =
@@ -161,7 +161,7 @@ const CreatedPoke = () => {
 	const handlerCreatePokemon = (e) => {
 		e.preventDefault();
 		dispatch(
-			createPoke({ ...newPokemon, name: newPokemon.name.toLowerCase() })
+			createPoke({ ...newPokemon, name: newPokemon.name})
 		);
 		alert("Tu pokemon ha sido creado exitosamente");
 		setNewPokemon({
@@ -180,33 +180,33 @@ const CreatedPoke = () => {
 		}, 1000);
 	};
 
-	const [disabledButton, setDisabledButton] = useState(true);
+	// const [disabledButton, setDisabledButton] = useState(true);
 
-	useEffect(() => {
-		if (
-			newPokemon.name === "" ||
-			newPokemon.types.length < 1 ||
-			error.hasOwnProperty("name") ||
-			error.hasOwnProperty("image") ||
-			error.hasOwnProperty("hp") ||
-			error.hasOwnProperty("attack") ||
-			error.hasOwnProperty("defense") ||
-			error.hasOwnProperty("speed") ||
-			error.hasOwnProperty("height") ||
-			error.hasOwnProperty("weight")
-		) {
-			setDisabledButton(true);
-		} else {
-			setDisabledButton(false);
-		}
-	}, [error, newPokemon, setDisabledButton]);
+	// useEffect(() => {
+	// 	if (
+	// 		newPokemon.name === "" ||
+	// 		newPokemon.types.length < 1 ||
+	// 		error.hasOwnProperty("name") ||
+	// 		error.hasOwnProperty("image") ||
+	// 		error.hasOwnProperty("hp") ||
+	// 		error.hasOwnProperty("attack") ||
+	// 		error.hasOwnProperty("defense") ||
+	// 		error.hasOwnProperty("speed") ||
+	// 		error.hasOwnProperty("height") ||
+	// 		error.hasOwnProperty("weight")
+	// 	) {
+	// 		setDisabledButton(true);
+	// 	} else {
+	// 		setDisabledButton(false);
+	// 	}
+	// }, [error, newPokemon, setDisabledButton]);
 
 	return (
 		<div className={s.createPokemonContainer}>
 			<NavSecond />
 			<div className={s.formContainer}>
 				<form className={s.form}>
-					<h1 className={s.titleCreatePokemon}>Crea un nuevo Pokemon</h1>
+					<h1 className={s.titleCreatePokemon}>Crea tu Pokemon favorito</h1>
 
 					<div className={s.columnsContainer}>
 						{/**PRIMERA COLUMNA */}
@@ -218,7 +218,7 @@ const CreatedPoke = () => {
 									type='text'
 									name='name'
 									value={newPokemon.name}
-									placeholder='Ej: PokeCarlos'
+									placeholder='Ej: Mi pokemon favorito'
 									onChange={(e) => handlerChange(e)}
 									autoComplete='off'
 								/>
@@ -310,14 +310,14 @@ const CreatedPoke = () => {
 								<label>Imagen:</label>
 								<input
 									type='text'
-									name='img'
+									name='image'
 									placeholder='Url de imagen Pokemon'
-									value={newPokemon.img}
+									value={newPokemon.image}
 									onChange={(e) => handlerChange(e)}
 									autoComplete='off'
 								/>
 							</div>
-							{error.img && <p className={s.error}>{error.img}</p>}
+							{error.image && <p className={s.error}>{error.image}</p>}
 
 							<div className={s.selectInfo}>
 								<label>Elija el Primer Tipo:</label>
@@ -363,7 +363,7 @@ const CreatedPoke = () => {
 					</div>
 
 					<button
-						disabled={disabledButton}
+						// disabled={disabledButton}
 						className={s.buttonCreatePokemon}
 						onClick={(e) => handlerCreatePokemon(e)}
 					>

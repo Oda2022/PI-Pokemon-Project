@@ -3,6 +3,7 @@ form {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px; /* Agrego un margen inferior para separar del contenido siguiente */
+    margin-top: 25px;
 }
 
 .inputSearchBar {
@@ -11,33 +12,32 @@ form {
     border-radius: 50px; /* Incremento el radio para darle un aspecto más moderno */
     border: none;
     font-size: 18px;
-    color: #fff;
-    background-color: #af0f47; /* Cambio el color de fondo a rojo oscuro */
-    box-shadow: 0 5px 0 #c00;
+    color: #050505;
+    background-color: #0faf72; /* Cambio el color de fondo a rojo oscuro */
+    box-shadow: none;
     flex-grow: 1; /* Hago que el input crezca para ocupar todo el espacio disponible */
 }
 
 .buttonSearchBar {
 	padding: 10px 20px;
     color: #fff;
-    border: solid 1px #af0f47; /* Cambio el borde a rojo oscuro */
+    border: none; /* Cambio el borde a rojo oscuro */
     border-radius: 10px;
-    background: #af0f47; /* Cambio el fondo a rojo oscuro */
-    font-family: 'Open Sans', sans-serif; /* Agrego una fuente legible y moderna */
+    background: #0f54af; /* Cambio el fondo a rojo oscuro */
+    font-family: Arial, sans-serif; /* Agrego una fuente legible y moderna */
     transition: all 0.3s ease-in-out; /* Agrego una transición suave */
+    font-weight: bold;
 }
 
 .buttonSearchBar:hover {
-	background-color: #fff; /* Cambio el fondo a blanco */
-    border: solid 1px #fff; /* Cambio el borde a blanco */
-    color: #af0f47; /* Cambio el texto a rojo oscuro */
+	background-color: #F6CF57; /* Cambio el fondo a blanco */
+    color: #080808; /* Cambio el texto a rojo oscuro */
     cursor: pointer; /* Agrego un cursor para indicar que se trata de un botón */
-
     transform: translateY(-2px); /* Agrego una animación al hacer hover */
 }
 
 ::placeholder {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 

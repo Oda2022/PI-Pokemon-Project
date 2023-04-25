@@ -24,26 +24,31 @@ html, body {
   }
 
 .landingbutton {
-    width: 10%;
-    border-radius: 50px;
-    background-color: rgba(243, 14, 26, 0.915);
-    font-size: 45px;
-    font-style: normal;
-    border-color: rgb(231, 234, 240);
-    color: white; 
-    padding: 20px;
-    box-shadow: 20px;
-    position: absolute;
-    top: 50%; /* Posicionamos el botón en el centro vertical */
-    left: 30%; /* Posicionamos el botón en el centro horizontal */
-    transform: translate(-50%, -50%); /* Centramos el botón */
-    text-align: center;
-    text-decoration: none;
-}
+    display: inline-block;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    left: -1350px;
+  }
+
+
+.buttonImage {
+    display: block;
+    width: 700px; /* ajustar al tamaño del botón */
+    height: 800px; /* ajustar al tamaño del botón */
+    left: 0; /* Alinea horizontalmente a la izquierda */
+    border: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .landingbutton:hover .buttonImage {
+    opacity: 0;
+  }
 
 .landingbutton:hover {
-    background-color:rgb(13, 226, 102) ;
-    color: rgba(2, 12, 14, 0.911);
-    font-weight: bolder;
-    font-size: 30px;
+  background-image: url('../Imagenes/pikachucolorbuttonBIEN.png');
+  background-size: cover;
   }

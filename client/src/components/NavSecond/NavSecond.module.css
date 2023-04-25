@@ -5,7 +5,6 @@
 	align-items: center;
 	width: 100%;
 	height: 60px;
-
 	background-color: rgba(22, 16, 16, 0.658);
 	box-shadow: 0 0 10px 5px rgba(121, 115, 115, 0.658);
 	backdrop-filter: blur(5px);
@@ -15,7 +14,7 @@
 .linkNavSecondary {
     padding: 10px 20px;
     color: #fff;
-    border: solid 1px #768d84; /* Cambio el borde a rojo oscuro */
+    border: none; /* Cambio el borde a rojo oscuro */
     border-radius: 20px;
     background: #0faf72; /* Cambio el fondo a rojo oscuro */
     font-family: 'Open Sans', sans-serif; /* Agrego una fuente legible y moderna */
@@ -24,8 +23,9 @@
 }
 
 .linkNavSecondary:hover {
-    background-color: #fff; /* Cambio el fondo a blanco */
-    border: solid 1px #fff; /* Cambio el borde a blanco */
-    color: #af0f47; /* Cambio el texto a rojo oscuro */
+    background-color: #F6CF57; /* Cambio el fondo a blanco */
+    border: none; /* Cambio el borde a blanco */
+    color: #000000; /* Cambio el texto a rojo oscuro */
     cursor: pointer; /* Agrego un cursor para indicar que se trata de un botón */
+    font-weight: bold;
 }
